@@ -1,6 +1,7 @@
 # Event-Driven Backtesting with Python - Part I
 
    *Source: [QuantStart](https://www.quantstart.com/articles/Event-Driven-Backtesting-with-Python-Part-I/)*
+   
    *中文：[用Python进行事件驱动的回测-第1部分](https://github.com/BruceFrankWong/NotesForSecurity/tree/master/quantstart/zh/Event-Driven-Backtesting-with-Python-Part-I_zh.md)*
 
 We've spent the last couple of months on QuantStart backtesting various trading strategies utilising Python and [pandas](http://pandas.pydata.org/). The vectorised nature of pandas ensures that certain operations on large datasets are extremely rapid. However the forms of vectorised backtester that we have studied to date suffer from some drawbacks in the way that trade execution is simulated. In this series of articles we are going to discuss a more realistic approach to historical strategy simulation by constructing an **event-driven** backtesting environment using Python.
