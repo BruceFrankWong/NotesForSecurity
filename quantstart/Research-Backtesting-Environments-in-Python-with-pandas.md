@@ -2,7 +2,7 @@
 
  *source： [QuantStart](https://www.quantstart.com/articles/Research-Backtesting-Environments-in-Python-with-pandas/)*
 
- *中文: (https://github.com/BruceFrankWong/NotesForSecurity/blob/master/quantstart/Research-Backtesting-Environments-in-Python-with-pandas_zh.md)*
+ *中文: [在Python和pandas中的研究回测环境](https://github.com/BruceFrankWong/NotesForSecurity/blob/master/quantstart/Research-Backtesting-Environments-in-Python-with-pandas_zh.md)*
 
 Backtesting is the research process of applying a trading strategy idea to historical data in order to ascertain past performance. In particular, a backtester makes no guarantee about the future performance of the strategy. They are however an essential component of the strategy pipeline research process, allowing strategies to be filtered out before being placed into production.
 
