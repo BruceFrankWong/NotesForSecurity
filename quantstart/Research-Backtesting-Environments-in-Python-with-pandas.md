@@ -1,6 +1,7 @@
 # Research Backtesting Environments in Python with pandas
 
  *source： [QuantStart](https://www.quantstart.com/articles/Research-Backtesting-Environments-in-Python-with-pandas/)*
+
  *中文: (Research-Backtesting-Environments-in-Python-with-pandas_zh.md)*
 
 Backtesting is the research process of applying a trading strategy idea to historical data in order to ascertain past performance. In particular, a backtester makes no guarantee about the future performance of the strategy. They are however an essential component of the strategy pipeline research process, allowing strategies to be filtered out before being placed into production.
@@ -25,12 +26,17 @@ The latter systems are often written in a high-performance language such as C++ 
 The design and implementation of an object-oriented research-based backtesting environment will now be discussed. Object orientation has been chosen as the software design paradigm for the following reasons:
 
 + The interfaces of each component can be specified upfront, while the internals of each component can be modified (or replaced) as the project progresses
+
 + By specifying the interfaces upfront it is possible to effectively test how each component behaves (via unit testing)
+
 + When extending the system new components can be constructed upon or in addition to others, either by inheritance or composition
+
 At this stage the backtester is designed for ease of implementation and a reasonable degree of flexibility, at the expense of true market accuracy. In particular, this backtester will only be able to handle strategies acting on a single instrument. Later the backtester will modified to handle sets of instruments. For the initial backtester, the following components are required:
 
 + Strategy - A Strategy class receives a Pandas DataFrame of bars, i.e. a list of Open-High-Low-Close-Volume (OHLCV) data points at a particular frequency. The Strategy will produce a list of signals, which consist of a timestamp and an element from the set  indicating a long, hold or short signal respectively.
+
 + Portfolio - The majority of the backtesting work will occur in the Portfolio class. It will receive a set of signals (as described above) and create a series of positions, allocated against a cash component. The job of the Portfolio object is to produce an equity curve, incorporate basic transaction costs and keep track of trades.
+
 + Performance - The Performance object takes a portfolio and produces a set of statistics about its performance. In particular it will output risk/return characteristics (Sharpe, Sortino and Information Ratios), trade/profit metrics and drawdown information.
 
 ### What's Missing?
