@@ -349,4 +349,4 @@ The final method in the ***NaivePortfolio*** is the generation of an equity curv
 
 The ***Portfolio*** object is the most complex aspect of the entire event-driven backtest system. The implementation here, while intricate, is relatively elementary in its handling of positions. Later versions will consider risk management and position sizing, which will lead to a much more realistic idea of strategy performance.
 
-In the next article we will consider the final piece of the event-driven backtester, namely an ***ExecutionHandler*** object, which is used to take ***OrderEvent*** objects and create ***FillEvent*** objects from them.
+In the [next article](https://github.com/BruceFrankWong/NotesForSecurity/tree/master/quantstart/en/Event-Driven-Backtesting-with-Python-Part-VI.md) we will consider the final piece of the event-driven backtester, namely an ***ExecutionHandler*** object, which is used to take ***OrderEvent*** objects and create ***FillEvent*** objects from them.
